@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
+    <title>Mankii许曼琪的个人领域</title>
+    <meta name="description" content="Mankii许曼琪,前端攻城狮,半个设计狮,个人网站,博客,jquery插件,js插件">
+    <script src="static/js/mankii.min.js"></script>
+    <link href="static/css/mankii.min.css" rel="stylesheet">
+</head>
+<body class="fonts-loading">
+    <canvas id="ribbon"></canvas>
+
+    <div id="logo">
+        <a href="index.html#know" class="no-barba">
+            <img src="static/images/logo.png" width="43.812" alt="" style="pointer-events: none;">
+        </a>
+    </div>
+
+    <a href="#" id="menu-button">
+      <div></div><div></div><div></div>
+    </a>
+
+    <div id="menu">
+        <div id="menu-wrapper">
+            <ul id=menu-items>
+                <li data-section="home"><a href="index.html" class="no-barba">首页</a></li>
+                
+                <li class="dropdown" data-section="jobs"><a href="#" class="no-barba">我的工作</a>
+                    <ul>
+                        
+                        <li data-section="senior-developer"><a href="web-front-end.html">Web前端</a></li>
+                        
+                        <li data-section="design-intern"><a href="design.html">设计</a></li>
+                        
+                    </ul>
+                </li>
+
+                <li data-section="mankii"><a href="mankii.html" class="no-barba">我的简历</a></li>
+                <li onclick="window.open('https://www.cnblogs.com/mankii/', '_blank')"><a href="javascript:;" class="no-barba">我的博客</a></li>
+                <li data-section="contact"><a href="contact.html" class="no-barba">联系我</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        if (location.hostname.indexOf('mankii') == -1) {
+          // Site.toggleGrid();
+          // Site.toggleStats();
+        }
+
+        Ribbon.init(document.getElementById('ribbon'));
+    </script>
+
+    <div id="wrapper">
+        <div class="page-content contact-page">
+            
+
+            <div class="form-page"
+                style="--accent-color: #e6635a; --accent-hover-color: #cc5850; --selection-color: rgba(230,99,90,0.25);">
+                
+                <div id="form-section">
+                    <h1 id="hello">Say<br/>Hello<span></span></h1>
+                    <form id="form" action="" method="POST" enctype="text/plain">
+                        <div id="name" class="input-block">
+                            <h4>嘿Mankii ！* 我是...</h4>
+                            <span class="border"><input id="name-input" type="text" placeholder="你的名字" required></span>
+                        </div>
+                        <div id="company" class="input-block">
+                            <h4>我来自...</h4>
+                            <span class="border"><input id="company-input" type="text" placeholder="你的公司/组织等" required></span>
+                        </div>
+                        <div id="email" class="input-block">
+                            <h4>* 我的联系方式是...</h4>
+                            <span class="border"><input id="email-input" type="email" placeholder="请输入邮箱/电话" required></span>
+                        </div>
+                        <div id="description" class="input-block">
+                            <h4>* 我找你是因为...</h4>
+                            <div class="border"><textarea id="description-input" placeholder="项目需求？你想干啥？" required></textarea></div>
+                        </div>
+                        <div id="budget" class="input-block">
+                            <h4>我的预算是...</h4>
+                            <span>
+                                <select id="budget-input" name="Budget" required>
+                                    <option selected="selected" disabled="disabled" value="">-请选择-</option>
+                                    <option value="¥1,000">¥1,000</option>
+                                    <option value="¥1,000 - ¥5,000">¥1000 - ¥5000</option>
+                                    <option value="¥5,000 - ¥8,000">¥5000 - ¥8000</option>
+                                    <option value="¥8,000 - ¥10,000">¥8000 - ¥10,000</option>
+                                    <option value="¥10,000 - ¥20,000">¥10,000 - ¥20,000</option>
+                                    <option value="¥20,000 - ¥50,000">¥20,000 - ¥50,000</option>
+                                    <option value="¥50,000+">¥50,000+</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div id="timeframe" class="input-block">
+                            <h4>期待的最晚完成时间是...</h4>
+                            <span class="border"><input id="timeframe-input" type="text" placeholder="截止日期" required></span>
+                        </div>
+                        <div id="ps" class="input-block">
+                            <h4>备注/建议</h4>
+                            <div class="border"><textarea id="ps-input" placeholder="其他想跟我说的话"></textarea></div>
+                        </div>
+                        <iframe src="about:blank" id="no-target" name="no-target" style="visibility:hidden; display:none"></iframe>
+                    </form>
+                    <a id="submit" class="disabled">
+                        <h2>发送</h2>
+                        <span id="strike-through"></span>
+                        <div id="arrow">
+                            <span id="point"></span>
+                        </div>
+                        <div id="circle">
+                            <div id="halfclip">
+                                <div class="halfcircle" id="clipped">
+                                </div>
+                            </div>
+                            <div class="halfcircle" id="fixed">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div id="success">
+                    <h1 id="thanks">
+                        Thank<br/>You.
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 135 135">
+                                <path id="star_copy" data-name="star copy" fill="#ff6e63" style="isolation: isolate" d="M-159.65,131.67l-20.86-7.5-20.86,7.5-12.47-18.32-21.28-6.19.68-22.15L-248,67.48-234.43,50l-.68-22.15,21.28-6.19,12.47-18.32,20.86,7.5,20.86-7.5,12.47,18.32,21.27,6.19L-126.59,50-113,67.48-126.59,85l.68,22.15-21.28,6.19Zm-20.86-8.8,20.38,7.32,12.18-17.9,20.79-6.05-.67-21.64,13.26-17.11-13.26-17.12.67-21.65-20.79-6.05-12.18-17.9-20.38,7.32-20.38-7.32-12.18,17.9-20.79,6.05.67,21.65-13.26,17.12,13.26,17.12-.67,21.65,20.79,6.05,12.18,17.9ZM-179.4,135l-17.74-13.28-22.14,1.05-6.55-21.18-18.53-12.16,7.15-21L-245,47.68l18.11-12.76,5.84-21.38,22.17.32L-181.62,0l17.74,13.28,22.14-1.05,6.54,21.17,18.53,12.16-7.15,21L-116,87.28-134.1,100l-5.84,21.38-22.16-.32Zm-17.36-14.52.18.13,17.16,12.85,16.9-13.54,21.65.31,5.71-20.89,17.7-12.47-7.66-20.25,7-20.5-18.1-11.89-.07-.21-6.33-20.48-21.63,1-.18-.13L-181.59,1.55l-16.9,13.54-21.65-.31-5.71,20.89-17.7,12.47,7.66,20.26-7,20.49,18.1,11.88.07.21,6.33,20.48Z" transform="translate(248)"/><path fill="#ff6e63" d="M-181,71.58a1.34,1.34,0,0,1,1.41,0l7.75,5.32c.39.27.64.1.55-.36l-.9-4.94a2.37,2.37,0,0,0-.86-1.33l-6.54-4.49a1.35,1.35,0,0,0-1.41,0l-6.54,4.49a2.37,2.37,0,0,0-.86,1.33l-.9,4.94c-.08.46.16.63.55.36Zm0,7.49a1.35,1.35,0,0,1,1.41,0l7.75,5.32c.39.27.64.1.55-.36l-.9-4.94a2.37,2.37,0,0,0-.86-1.33l-6.54-4.49a1.35,1.35,0,0,0-1.41,0l-6.54,4.49a2.37,2.37,0,0,0-.86,1.33l-.9,4.94c-.08.46.16.63.55.36Zm9.12-10.74L-180,50.81a.32.32,0,0,0-.28-.37.32.32,0,0,0-.37.28.32.32,0,0,0,0,.09l-8.09,17.51c-.19.54,0,.73.47.41l7.18-4.88a1.44,1.44,0,0,1,1.52,0l7.18,4.88c.45.31.67.13.48-.42Zm-26.25,6.19a.68.68,0,0,1,.7,0l3.85,2.6c.19.13.31.05.27-.18l-.45-2.42a1.15,1.15,0,0,0-.43-.65l-3.25-2.19a.67.67,0,0,0-.7,0l-3.25,2.19a1.15,1.15,0,0,0-.43.65l-.45,2.42c0,.23.08.31.27.18Zm0,3.92a.68.68,0,0,1,.7,0l3.85,2.6c.19.13.31.05.27-.18l-.45-2.42a1.16,1.16,0,0,0-.43-.65l-3.25-2.19a.68.68,0,0,0-.7,0l-3.25,2.19a1.16,1.16,0,0,0-.43.65l-.45,2.42c0,.23.08.31.27.18Zm4.53-5.76-4-8.56a.16.16,0,0,0-.14-.18.16.16,0,0,0-.18.14.16.16,0,0,0,0,0l-4,8.56c-.09.27,0,.36.24.2l3.56-2.38a.73.73,0,0,1,.75,0l3.56,2.38c.22.15.33.06.24-.21Zm30,1.85a.68.68,0,0,1,.7,0l3.85,2.6c.19.13.31.05.27-.18l-.45-2.42a1.15,1.15,0,0,0-.43-.65l-3.25-2.19a.67.67,0,0,0-.7,0l-3.25,2.19a1.15,1.15,0,0,0-.43.65l-.45,2.42c0,.23.08.31.27.18Zm0,3.92a.68.68,0,0,1,.7,0L-159,81c.19.13.31.05.27-.18l-.45-2.42a1.16,1.16,0,0,0-.43-.65l-3.25-2.19a.68.68,0,0,0-.7,0l-3.25,2.19a1.16,1.16,0,0,0-.43.65l-.45,2.42c0,.23.08.31.27.18Zm4.53-5.76-4-8.56a.16.16,0,0,0-.14-.18.16.16,0,0,0-.18.14.16.16,0,0,0,0,0l-4,8.56c-.09.27,0,.36.24.2l3.56-2.38a.73.73,0,0,1,.75,0l3.56,2.38c.22.15.33.06.24-.21Z" transform="translate(248)"/></svg>
+                        </span>
+                    </h1>
+                    <p>我将尽快与您联系，进一步讨论如何帮助您的项目。</p>
+                </div>
+
+                <div id="error">
+                    <h1>好吧<br/>糟糕了。<span></span></h1>
+                    <p>出了问题。很抱歉。</p>
+                    <p>试着把一封普通的电子邮件发送到 <a href="mailto:mankii1994@outlook.com">mankii1994@outlook.com</a></p>
+                </div>
+
+                <div id="footer" style="--accent-color: #ff6e63; --accent-hover-color: #cc5850; ">
+                    <div id="social">
+                        <h5>版权</h5>
+                        <div>
+                            <a href="http://www.beian.miit.gov.cn/" target="_blank">
+                                ©Mankii.com
+                            </a>
+                        </div>
+                    </div>
+                    <div id="jobs">
+                        <h5>邮箱</h5>
+                        <a href="mailto:mankii1994@outlook.com">mankii1994@outlook.com</a>
+                    </div>
+                    <div id="general">
+                        <h5>电话</h5>
+                        <a href="javascript:;">183****2295</a>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                Site.previousPage = Site.currentPage;
+                let form = new Form();
+                Site.currentPage = form;
+
+                form.firstRun = function() {
+                    form.addListeners();
+                    Ribbon.drawArea = form.ribbonDrawArea();
+                    Ribbon.primaryColor = Site.currentPage.ribbonColor.primary;
+                    Ribbon.secondaryColor = Site.currentPage.ribbonColor.secondary;
+                    Ribbon.setMode(Ribbon.Mode.CASE_DETAIL);
+                    Menu.logo.classList.add('fixed');
+                }
+
+            </script>
+
+        </div>
+    </div>
+
+    <div id="menu-modal"></div>
+
+    <script>
+        FontCssLoader.init(["static/css/fonts.css"], function() {
+            Menu.init();
+
+            Site.init();
+            if (Site.smoothScroll) {
+                Site.smoothScroll.paginate = Site.currentPage.paginate;
+                Site.smoothScroll.paginateModifier = (Site.currentPage.paginateModifier || 1);
+            }
+
+            if (Site.currentPage && Site.currentPage.firstRun) {
+                Site.currentPage.firstRun();
+            }
+
+            Site.startRendering();
+
+            Site.prepareForIntro();
+            document.body.classList.remove('fonts-loading');
+            setTimeout(function() {
+                requestAnimationFrame(function() {
+                    Site.playIntro();
+                });
+            }, 25);
+        });
+    </script>
+</body>
+</html>

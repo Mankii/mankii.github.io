@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
+    <title>Mankii许曼琪的个人领域</title>
+    <meta name="description" content="Mankii许曼琪,前端攻城狮,半个设计狮,个人网站,博客,jquery插件,js插件">
+    <script src="static/js/mankii.min.js"></script>
+    <link href="static/css/mankii.min.css" rel="stylesheet">
+</head>
+<body class="fonts-loading">
+    <canvas id="ribbon"></canvas>
+
+    <div id="logo">
+        <a href="index.html#mankii" class="no-barba">
+            <img src="static/images/logo.png" width="43.812" alt="" style="pointer-events: none;">
+        </a>
+    </div>
+
+    <a href="#" id="menu-button">
+      <div></div><div></div><div></div>
+    </a>
+
+    <div id="menu">
+        <div id="menu-wrapper">
+            <ul id=menu-items>
+                <li data-section="home"><a href="index.html" class="no-barba">首页</a></li>
+                
+                <li class="dropdown" data-section="jobs"><a href="#" class="no-barba">我的工作</a>
+                    <ul>
+                        
+                        <li data-section="senior-developer"><a href="web-front-end.html">Web前端</a></li>
+                        
+                        <li data-section="design-intern"><a href="design.html">设计</a></li>
+                        
+                    </ul>
+                </li>
+
+                <li data-section="mankii"><a href="mankii.html" class="no-barba">我的简历</a></li>
+                <li onclick="window.open('https://www.cnblogs.com/mankii/', '_blank')"><a href="javascript:;" class="no-barba">我的博客</a></li>
+                <li data-section="contact"><a href="contact.html" class="no-barba">联系我</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        if (location.hostname.indexOf('mankii') == -1) {
+          // Site.toggleGrid();
+          // Site.toggleStats();
+        }
+
+        Ribbon.init(document.getElementById('ribbon'));
+    </script>
+
+    <div id="wrapper">
+        <div class="page-content jobs-detail-page">
+            
+
+            <div id="senior-developer-listing"
+                class="listing"
+                data-slug="senior-developer"
+                data-primarycolor="#F0F1F2"
+                data-secondarycolor="#E8EBED"
+                style="--accent-color: #FF6E63; --accent-hover-color: #cc5850; --selection-color: rgba(255,110,99,0.25);">
+
+                <div class="listing-title">
+                    <h2>关于我，很简单</h2>
+                    <h1>Mankii</h1>
+                    <span class="stroke" style="background-color: #FF6E63"></span>
+                </div>
+
+                <div class="top-line">
+                    <p class="top-level-1 pr-10">
+                        <span class="block text-bold">技能</span>
+                        <span class="block mt-10">HTML/HTML5</span>
+                        <span class="progress">
+                            <span class="progress-bar bg-primary" style="background-color: #FF6E63; width: 95%;"></span>
+                        </span>
+                        <span class="block mt-10">CSS/CSS3</span>
+                        <span class="progress">
+                            <span class="progress-bar bg-primary" style="background-color: #FF6E63; width: 96%;"></span>
+                        </span>
+                        <span class="block mt-10">VUE</span>
+                        <span class="progress">
+                            <span class="progress-bar bg-primary" style="background-color: #FF6E63; width: 90%;"></span>
+                        </span>
+                        <span class="block mt-10">Photoshop/Illustrator</span>
+                        <span class="progress">
+                            <span class="progress-bar bg-primary" style="background-color: #FF6E63; width: 70%;"></span>
+                        </span>
+                        <span class="block mt-10">Teamwork</span>
+                        <span class="progress">
+                            <span class="progress-bar bg-primary" style="background-color: #FF6E63; width: 66%;"></span>
+                        </span>
+                    </p>
+                    <p class="top-level-2">
+                        <span class="block text-bold">简历</span>
+                        <span class="block timeline mt-10">
+                            <span class="block timeline-item">
+                                <span class="block text-bold">2016.6-至今</span>
+                                <span class="block">深圳工作-web前端攻城狮</span>
+                            </span>
+                            <span class="block timeline-item">
+                                <span class="block text-bold">2012.9-2016.6</span>
+                                <span class="block">韶关学院-计算机科学与技术(软件工程方向)-本科四年</span>
+                            </span>
+                        </span>
+                    </p>
+                </div>
+
+
+                <div class="page-main">
+                    <!-- 简历 start -->
+                    <div class="resume">
+                        <div class="resume-left">
+                            快活了一万天了，好像快要明白人生的意义了，但是又没有完全明白。
+                        </div>
+                        <div class="resume-right">
+                            明明白白是一天，稀里糊涂也是一天，那还是糊涂点吧，开开心心地过~
+                        </div>
+                    </div>
+                    <!-- 简历 end -->
+                </div>
+                
+
+                <div class="perks">
+                    <div></div>
+                </div>
+
+                <div class="mid-cta">
+                    <span>想提一提建议吗？</span>
+                    <a href="contact.html" >
+                        那就给我留个信呗
+                        <span class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="9.12" height="15.994" viewBox="0 0 9.12 15.994">
+                                <polygon points="9.12 8.035 1.662 0 0 1.81 5.76 8.016 0.12 14.16 1.803 15.994 7.452 9.839 7.458 9.846 9.12 8.035" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+
+
+                <div class="section dark">
+                    <div class="section-content">
+                        <div class="working-at-mankii">
+                            <h2>More...</h2>
+                            <h3>等等，你还在看呢？那你可能对下面的内容会有兴趣…</h3>
+
+
+                            <p>有时间的话可以去我的博客看看，也没什么有趣的内容啦，一些小文章，希望你喜欢~</p>
+
+                            <div class="photo-slider">
+                                <div class="polaroids-wrapper">
+                                    <div class="polaroid"><img src="static/images/couch-square.jpg" alt=""></div>
+                                    <div class="polaroid"><img src="static/images/campfire-square.jpg" alt=""></div>
+                                    <div class="polaroid"><img src="static/images/pingpong-square.jpg" alt=""></div>
+                                    <div class="polaroid"><img src="static/images/monitor-square.jpg" alt=""></div>
+                                </div>
+                            </div>
+
+                            <p>生活就是一场约会。</p>
+
+                            <div class="photo-card landscape">
+                                <div class="photo-wrapper">
+                                    <img class="photo" data-src="static/images/couch.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="photo-card portrait">
+                                <div class="photo-wrapper">
+                                    <img class="photo" data-src="static/images/campfire.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="photo-card portrait">
+                                <div class="photo-wrapper">
+                                    <img class="photo" data-src="static/images/pingpong.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="photo-card landscape">
+                                <div class="photo-wrapper">
+                                    <img class="photo" data-src="static/images/monitor.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://www.cnblogs.com/mankii/" target="_blank" class="apply-button"><span>去博客</span></a>
+
+                        <div id="footer" >
+                            <div id="social">
+                                <h5>版权</h5>
+                                <div>
+                                    <a href="http://www.beian.miit.gov.cn/" target="_blank">
+                                        ©Mankii.com
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="jobs">
+                                <h5>邮箱</h5>
+                                <a href="mailto:mankii1994@outlook.com">mankii1994@outlook.com</a>
+                            </div>
+                            <div id="general">
+                                <h5>电话</h5>
+                                <a href="javascript:;">183****2295</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                Site.previousPage = Site.currentPage;
+                let page = new JobListing(document.getElementById('senior-developer-listing'));
+                Site.currentPage = page;
+
+                page.firstRun = function() {
+                    Site.currentPage.addListeners();
+                    Ribbon.drawArea = {top: 0, height: Math.max(innerWidth * 1.125, 1600)};
+                    Ribbon.primaryColor = Site.currentPage.ribbonColor.primary;
+                    Ribbon.secondaryColor = Site.currentPage.ribbonColor.secondary;
+                    Ribbon.setMode(Ribbon.Mode.CASE_DETAIL);
+                }
+            </script>
+
+        </div>
+    </div>
+
+    <div id="menu-modal"></div>
+
+    <script>
+        FontCssLoader.init(["static/css/fonts.css"], function() {
+            Menu.init();
+
+            Site.init();
+            if (Site.smoothScroll) {
+                Site.smoothScroll.paginate = Site.currentPage.paginate;
+                Site.smoothScroll.paginateModifier = (Site.currentPage.paginateModifier || 1);
+            }
+
+            if (Site.currentPage && Site.currentPage.firstRun) {
+                Site.currentPage.firstRun();
+            }
+
+            Site.startRendering();
+
+            Site.prepareForIntro();
+            document.body.classList.remove('fonts-loading');
+            setTimeout(function() {
+                requestAnimationFrame(function() {
+                    Site.playIntro();
+                });
+            }, 25);
+        });
+    </script>
+</body>
+</html>

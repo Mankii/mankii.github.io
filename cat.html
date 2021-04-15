@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
+    <title>Mankii许曼琪的个人领域</title>
+    <meta name="description" content="Mankii许曼琪,前端攻城狮,半个设计狮,个人网站,博客,jquery插件,js插件">
+    <script src="static/js/mankii.min.js"></script>
+    <link href="static/css/mankii.min.css" rel="stylesheet">
+</head>
+<body class="fonts-loading">
+    <canvas id="ribbon"></canvas>
+
+    <div id="logo">
+        <a href="index.html#cat" class="no-barba">
+            <img src="static/images/logo.png" width="43.812" alt="" style="pointer-events: none;">
+        </a>
+    </div>
+
+    <a href="#" id="menu-button">
+      <div></div><div></div><div></div>
+    </a>
+
+    <div id="menu">
+        <div id="menu-wrapper">
+            <ul id=menu-items>
+                <li data-section="home"><a href="index.html" class="no-barba">首页</a></li>
+                
+                <li class="dropdown" data-section="jobs"><a href="#" class="no-barba">我的工作</a>
+                    <ul>
+                        
+                        <li data-section="senior-developer"><a href="web-front-end.html">Web前端</a></li>
+                        
+                        <li data-section="design-intern"><a href="design.html">设计</a></li>
+                        
+                    </ul>
+                </li>
+
+                <li data-section="mankii"><a href="mankii.html" class="no-barba">我的简历</a></li>
+                <li onclick="window.open('https://www.cnblogs.com/mankii/', '_blank')"><a href="javascript:;" class="no-barba">我的博客</a></li>
+                <li data-section="cat"><a href="cat.html" class="no-barba">我的猫</a></li>
+                <li data-section="contact"><a href="contact.html" class="no-barba">联系我</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        if (location.hostname.indexOf('mankii') == -1) {
+          // Site.toggleGrid();
+          // Site.toggleStats();
+        }
+
+        Ribbon.init(document.getElementById('ribbon'));
+    </script>
+
+    <div id="wrapper">
+        <div class="page-content studio-page">
+            
+            <!-- 主要内容 start -->
+            <div class="studio-page"
+                style="--accent-color: #e6635a; --accent-hover-color: #cc5850; --selection-color: rgba(230,99,90,0.25);">
+
+                <div id="about-section">
+                    <div id="studio-header">
+                        <h1 id="studio">My<br>Cat<span></span></h1>
+                        <p id="intro">2019年8月25日，她来到我的生活里，像是一个小恶魔，给我带来了前所未有的磨难！这个小恶魔长着一双水灵灵的大眼睛，粉粉的鼻头，小小的嘴巴，来的那天毛都还没有长齐，就开始撒泼耍横，占领我的地盘，宣布自己的主权！<br><br>她也是个小天使，在每个夜晚给我无声的陪伴，当我觉得孤单时，会上个极臭的大号，让我知道，这世界还有个小家伙需要我呢。</p>
+                    </div>
+
+                    <div id="intro-wrapper">
+                        <p id="intro-p1" class="intro-paragraph"><b>小恶魔？</b><br>2019年8月25日，她来到我的生活里，像是一个小恶魔，给我带来了前所未有的磨难！这个小恶魔长着一双水灵灵的大眼睛，粉粉的鼻头，小小的嘴巴，来的那天毛都还没有长齐，就开始撒泼耍横，占领我的地盘，宣布自己的主权！</p>
+                        <p id="intro-p2" class="intro-paragraph"><b>小天使？</b><br>她也是个小天使，在每个夜晚给我无声的陪伴，当我觉得孤单时，会上个极臭的大号，让我知道，这世界还有个小家伙需要我呢。</p>
+                    </div>
+
+                    <div id="studio-vision">
+                        <div id="vision-header">
+                            <h2 id="vision" >“呦呦”</h2>
+                            <p>去这个名字是希望她一生热闹 - <span>呦呦切克闹</span> - 活泼又快乐，哈哈，有趣又好听，快夸我！</p>
+                        </div>
+
+                        <div id="logo-mark" >
+                            <div style="text-align:right">
+                                <img src="static/images/cat.png" alt="" width="80">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="description-wrapper">
+                        <p id="content-p1" class="content">这个性格有点冷淡的小公主，是流浪猫的后代，她被发现的时候是在草丛里，身体瘦小，毛发都没有长好，眼神干净却又楚楚可怜。<br><br>看到小家伙的照片，让我忍不住想保护她。</p>
+                        <p id="content-p2" class="content text-center">
+                            <img src="static/images/cat/1.jpg" alt="">
+                        </p>
+                    </div>
+
+                    <div class="studio-partners">
+
+                        <div id="studio-past-present">
+                            <h2 id="partners">呦呦的<span id="partners-dash"></span></h2>
+                            <h2 id="past-present">成长记录</h2>
+
+                            <p>更多记录可以看 <a href="https://www.cnblogs.com/mankii/" target="_blank">我的博客&gt;</a></p>
+                        </div>
+
+                        <div id="partner-list">
+                            <!-- <ul>
+                                <li class="list-item"><b>2019.08.25</b><br>她来了</li>
+                                <li class="list-item"><img src="static/images/cat/1.jpg" alt="" width="100" height="100"></li>
+                                <li class="list-item"><img src="static/images/cat/1.jpg" alt="" width="100" height="100"></li>
+                                <li class="list-item"><b>2019.08.25</b><br>她来了</li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div id="dream-projects-section" class="section dark">
+                    <div id="projects-wrapper" class="section-content">
+                        <div id="project-body-left">
+                            <div id="projects-logo" class="tree-logo">
+                                
+                            </div>
+
+                            <h1 id="projects-header">岁月对比照</h1>
+                            <span id="projects-dash"></span>
+                            <p id="projects-intro">看着一个小生命慢慢成长，是惊喜的，也是骄傲的~小猫长大的速度特别快，总是不知不觉就变大了，要看照片对比才发现时光在她身上的痕迹。</p>
+
+                        </div>
+
+                        <div id="project-body-right">
+                            <div class="grid-item">
+                                <div class="content">
+                                    <h1>01</h1>
+                                    <h2>一个月 </h2>
+                                    <p><img src="static/images/cat/2-1.jpg" alt="" style="width: 100%"></p>
+                                    <h6>被宠物店捡到啦</h6>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <div class="content">
+                                    <h1>02</h1>
+                                    <h2>两个月 </h2>
+                                    <p><img src="static/images/cat/2-2.jpg" alt="" style="width: 100%"></p>
+                                    <h6>打包带回家，今天起你就是我的猫</h6>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <div class="content">
+                                    <h1>03</h1>
+                                    <h2>四个月 </h2>
+                                    <p><img src="static/images/cat/2-3.jpg" alt="" style="width: 100%"></p>
+                                    <h6>开始不停拆家……</h6>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <div class="content">
+                                    <h1>04</h1>
+                                    <h2>六个月 </h2>
+                                    <p><img src="static/images/cat/2-4.jpg" alt="" style="width: 100%"></p>
+                                    <h6>性格成型，嗯，是个有点高冷的主子</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="team-section">
+                    <div id="team-wrapper">
+
+                        <div id="team-left">
+                            <div id="team-logo" class="tree-logo">
+                            </div>
+
+                            <h1 id="team-header">长大啦</h1>
+                            <span id="team-dash"></span>
+                            <p id="team-intro">长大之前担心长大了就不萌了，没想到，猫咪的可爱是这么经得起时间的考验！
+                            </p>
+                            <div id="now-hiring"></div>
+                        </div>
+
+                        <div id="team-right">
+                            
+                            <div class="grid-item">
+                                <div class="content">
+                                    <h1>01</h1>
+                                    <h2>一个月 </h2>
+                                    <p><img src="static/images/cat/3-1.jpg" alt="" style="width: 100%"></p>
+                                    <h6>被宠物店捡到啦</h6>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <div class="content">
+                                    <h1>02</h1>
+                                    <h2>两个月 </h2>
+                                    <p><img src="static/images/cat/3-2.jpg" alt="" style="width: 100%"></p>
+                                    <h6>打包带回家，今天起你就是我的猫</h6>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <div class="content">
+                                    <h1>03</h1>
+                                    <h2>四个月 </h2>
+                                    <p><img src="static/images/cat/3-3.jpg" alt="" style="width: 100%"></p>
+                                    <h6>开始不停拆家……</h6>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <div class="content">
+                                    <h1>04</h1>
+                                    <h2>六个月 </h2>
+                                    <p><img src="static/images/cat/3-4.jpg" alt="" style="width: 100%"></p>
+                                    <h6>性格成型，嗯，是个有点高冷的主子</h6>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div id="camp-section">
+                    <div id="camp-container">
+
+                        <div id="ca" style="clip-path: url(#ca-svg-path); -webkit-clip-path: url(#webkit-ca-svg-path);">
+                        </div>
+
+                        <h2 id="mankii-camp-title"></h2>
+
+                        <div id="camp-dash"></div>
+
+                        <div id="mp" style="clip-path: url(#mp-svg-path); -webkit-clip-path: url(#webkit-mp-svg-path);">
+                        </div>
+                    </div>
+                    
+                    <div class="camp">
+                        <div id="summer-2019" class="date">
+                            <h1 class="month-name">照片墙 <br /></h1>
+                            
+                            <h5>愿你平安</h5>
+                            <h5>愿你快乐</h5>
+                            
+                        </div>
+
+                        
+                        <div class="photos">
+                            
+                            <div class="photo-card">
+                                <div class="photo-wrapper">
+                                    <img class="photo" data-src="https://mankii-media.s3.amazonaws.com/camp_photos/IMG_0384.jpg" alt="Tents">
+                                </div>
+                                <h6>呦呦<span class="dash"></span></h6>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+                <div id="footer" style="--accent-color: #ff6e63; --accent-hover-color: #cc5850; ">
+                    <div id="social">
+                        <h5>版权</h5>
+                        <div>
+                            <a href="http://www.beian.miit.gov.cn/" target="_blank">
+                                ©Mankii.com
+                            </a>
+                        </div>
+                    </div>
+                    <div id="jobs">
+                        <h5>邮箱</h5>
+                        <a href="mailto:mankii1994@outlook.com">mankii1994@outlook.com</a>
+                    </div>
+                    <div id="general">
+                        <h5>电话</h5>
+                        <a href="javascript:;">183****2295</a>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                Site.previousPage = Site.currentPage;
+                Site.currentPage = new Studio();
+
+                Site.currentPage.firstRun = function() {
+                    Site.currentPage.addListeners();
+
+                    Ribbon.drawArea = Site.currentPage.ribbonDrawArea();
+                    Ribbon.primaryColor = Site.currentPage.ribbonColor.primary;
+                    Ribbon.secondaryColor = Site.currentPage.ribbonColor.secondary;
+                    Ribbon.setMode(Ribbon.Mode.CASE_DETAIL);
+                    Menu.logo.classList.add('fixed');
+                }
+
+            </script>
+            <!-- 主要内容 end -->
+
+        </div>
+    </div>
+
+    <div id="menu-modal"></div>
+
+    <script>
+        FontCssLoader.init(["static/css/fonts.css"], function() {
+            Menu.init();
+
+            Site.init();
+            if (Site.smoothScroll) {
+                Site.smoothScroll.paginate = Site.currentPage.paginate;
+                Site.smoothScroll.paginateModifier = (Site.currentPage.paginateModifier || 1);
+            }
+
+            if (Site.currentPage && Site.currentPage.firstRun) {
+                Site.currentPage.firstRun();
+            }
+
+            Site.startRendering();
+
+            Site.prepareForIntro();
+            document.body.classList.remove('fonts-loading');
+            setTimeout(function() {
+                requestAnimationFrame(function() {
+                    Site.playIntro();
+                });
+            }, 25);
+        });
+    </script>
+</body>
+</html>

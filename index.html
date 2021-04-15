@@ -1,288 +1,265 @@
-
 <!DOCTYPE html>
-<html lang="zh-CN">
-
-
+<html lang="zh-cn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-  <meta name="theme-color" content="#202020"/>
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
-  
-  
-    <meta name="keywords" content="" />
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
+    <title>Mankii许曼琪的个人领域</title>
+    <meta name="description" content="Mankii许曼琪,前端攻城狮,半个设计狮,个人网站,博客,jquery插件,js插件">
+    <script src="static/js/mankii.min.js"></script>
+    <link href="static/css/mankii.min.css" rel="stylesheet">
+</head>
+<body class="fonts-loading">
+    <canvas id="ribbon"></canvas>
 
-  
-    <meta name="description" content="Hexo," />
-  
-  
-  <link rel="icon" type="image/x-icon" href="/logo.png">
-  <title> [ Hexo ]</title>
-  
-    <!-- stylesheets list from config.yml -->
-    
-      <link rel="stylesheet" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css">
-    
-      <link rel="stylesheet" href="/css/xoxo.css">
-    
-  
-<meta name="generator" content="Hexo 5.2.0"></head>
-
-
-<body>
-  <div class="nav-container">
-    <nav class="home-menu pure-menu pure-menu-horizontal">
-  <a class="pure-menu-heading" href="/">
-    <img class="avatar" src="http://localhost:4000/images/logo.png">
-    <span class="title">Hexo</span>
-  </a>
-
-  <ul class="pure-menu-list clearfix">
-      
-          
-            <li class="pure-menu-item actived"><a href="/" class="pure-menu-link">首页</a></li>
-          
-      
-          
-            <li class="pure-menu-item"><a href="/archives" class="pure-menu-link">归档</a></li>
-          
-      
-          
-            <li class="pure-menu-item"><a href="/tags" class="pure-menu-link">标签</a></li>
-          
-      
-          
-            <li class="pure-menu-item"><a href="/search" class="pure-menu-link">搜索</a></li>
-          
-      
-          
-            <li class="pure-menu-item"><a target="_blank" rel="noopener" href="https://0xff000000.com" class="pure-menu-link">关于</a></li>
-          
-      
-          
-            <li class="pure-menu-item"><a href="/atom.xml" class="pure-menu-link">订阅</a></li>
-          
-      
-  </ul>
-   
-</nav>
-  </div>
-
-  <div class="container" id="content-outer">
-    <div class="inner" id="content-inner">
-      
-
-  <div class="recent-posts">
-    
-
-      <article class="recent-post-item">
-        <a class="title" href="/2020/11/19/一片新的文章/"><h2>一片新的文章</h2></a>
-        <div class="post-meta">
-          
-          <time class="time" datetime="2020-11-19T09:02:09.000Z">
-            2020-11-19
-          </time>
-          
-          <span class="slash">/</span>
-          
-          
-          
-
-        </div>
-
-        
-        <a class="more" href="/2020/11/19/一片新的文章/"> 阅读全文〉</a>
-      </article>
-    
-
-      <article class="recent-post-item">
-        <a class="title" href="/2020/09/02/hello-world/"><h2>Hello World</h2></a>
-        <div class="post-meta">
-          
-          <time class="time" datetime="2020-09-01T16:16:54.000Z">
-            2020-09-02
-          </time>
-          
-          <span class="slash">/</span>
-          
-          <ul class="index-tag-list" itemprop="keywords"><li class="index-tag-list-item"><a class="index-tag-list-link" href="/tags/es6/" rel="tag">es6</a></li><li class="index-tag-list-item"><a class="index-tag-list-link" href="/tags/%E6%89%8B%E5%86%8C/" rel="tag">手册</a></li></ul>
-          
-
-        </div>
-
-        
-        <a class="more" href="/2020/09/02/hello-world/"> 阅读全文〉</a>
-      </article>
-    
-  </div>
-
-
-
+    <div id="logo">
+        <a href="index.html" class="no-barba">
+            <img src="static/images/logo.png" width="43.812" alt="" style="pointer-events: none;">
+        </a>
     </div>
 
+    <a href="#" id="menu-button">
+      <div></div><div></div><div></div>
+    </a>
+
+    <div id="menu">
+        <div id="menu-wrapper">
+            <ul id=menu-items>
+                <li data-section="home"><a href="index.html" class="no-barba">首页</a></li>
+                
+                <li class="dropdown" data-section="jobs"><a href="#" class="no-barba">我的工作</a>
+                    <ul>
+                        
+                        <li data-section="senior-developer"><a href="web-front-end.html">Web前端</a></li>
+                        
+                        <li data-section="design-intern"><a href="design.html">设计</a></li>
+                        
+                    </ul>
+                </li>
+
+                <li data-section="mankii"><a href="mankii.html" class="no-barba">我的简历</a></li>
+                <li onclick="window.open('https://www.cnblogs.com/mankii/', '_blank')"><a href="javascript:;" class="no-barba">我的博客</a></li>
+                <li data-section="contact"><a href="contact.html" class="no-barba">联系我</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        if (location.hostname.indexOf('mankii') == -1) {
+          // Site.toggleGrid();
+          // Site.toggleStats();
+        }
+
+        Ribbon.init(document.getElementById('ribbon'));
+    </script>
+
+    <div id="wrapper">
+        <div class="page-content home-page">
+            
+
+    
+        <ul id="bullets"
+            style="--selection-color: rgba(116,1,240,0.25);">
+            
+            <li>
+                <a href="#mankii">
+                    <span>M</span>
+                    <span class="project-name"><span>M</span>ankii</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="#web-front-end">
+                    <span>W</span>
+                    <span class="project-name"><span>W</span>eb Front-end</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="#design">
+                    <span>D</span>
+                    <span class="project-name"><span>D</span>esign</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.cnblogs.com/mankii/" target="_blank">
+                    <span>B</span>
+                    <span class="project-name"><span>B</span>log</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="#know">
+                    <span>T</span>
+                    <span class="project-name"><span>K</span>now Mankii</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="#site-info">
+                    <span>S</span>
+                    <span class="project-name"><span>S</span>ite Info</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul id="pages">
+            
+            <li id="mankii"
+                class='page client-hidden'
+                style="--highlight-primary: #7401f0; --selection-color: rgba(116,1,240,0.25);"
+                data-slug="mankii"
+                data-primarycolor="#7b00ff"
+                data-secondarycolor="#6d02e0"
+                data-midcolor="#7401f0"
+                data-selection-color="rgba(116,1,240,0.25)">
+                <a href="mankii.html">
+                    <h2>Mankii</h2>
+                    
+                    <p style="display: flex;">
+                        <span style="padding-right:10px;">
+                            <img src="static/images/avatar.png" alt="" width="80">
+                        </span>
+                        <span style="flex:1">你好，我是Mankii。<br>谢谢你这么美，还愿意来看我！<br>春天到了，愿你快乐得像朵小花儿~</span>
+                    </p>
+                    <div class="arrow"><div class="circle"></div><img src="static/images/home-arrow.svg" /><div class="spine"></div></div>
+                </a>
+            </li>
+            
+            <li id="web-front-end"
+                class='page '
+                style="--highlight-primary: #3c5df1; --selection-color: rgba(60,93,241,0.25);"
+                data-slug="web-front-end"
+                data-primarycolor="#4264FB"
+                data-secondarycolor="#3556e7"
+                data-midcolor="#3c5df1"
+                data-selection-color="rgba(60,93,241,0.25)">
+                <a href="web-front-end.html">
+                    <h2>Web Front-end</h2>
+                    <h3>前端作品从这里进</h3>
+                    <p>莫愁前路无知己，天下谁人不识君？</p>
+                    <div class="arrow"><div class="circle"></div><img src="static/images/home-arrow.svg" /><div class="spine"></div></div>
+                </a>
+            </li>
+            
+            <li id="design"
+                class='page '
+                style="--highlight-primary: #ec594b; --selection-color: rgba(236,89,75,0.25);"
+                data-slug="design"
+                data-primarycolor="#FF6152"
+                data-secondarycolor="#D85144"
+                data-midcolor="#ec594b"
+                data-selection-color="rgba(236,89,75,0.25)">
+                <a href="design.html">
+                    <h2>Design</h2>
+                    <h3>设计是个好活计呀…</h3>
+                    <p>我有画笔六寸六，勾棱画弧喜上头。</p>
+                    <div class="arrow"><div class="circle"></div><img src="static/images/home-arrow.svg" /><div class="spine"></div></div>
+                </a>
+            </li>
+            
+            <li id="blog"
+                class='page '
+                style="--highlight-primary: #ec2a5b; --selection-color: rgba(236,42,91,0.25);"
+                data-slug="blog"
+                data-primarycolor="#ff3366"
+                data-secondarycolor="#d9204f"
+                data-midcolor="#ec2a5b"
+                data-selection-color="rgba(236,42,91,0.25)">
+                <a href="https://www.cnblogs.com/mankii/" target="_blank">
+                    <h2>blog</h2>
+                    <h3>博客园根据地</h3>
+                    <p>你这么年轻，你可以成为任何你想成为的人。</p>
+                    <div class="arrow"><div class="circle"></div><img src="static/images/home-arrow.svg" /><div class="spine"></div></div>
+                </a>
+            </li>
+            
+            <li id="know"
+                class='page '
+                style="--highlight-primary: #b9e132; --selection-color: rgba(185,225,50,0.25);position: relative;"
+                data-slug="know"
+                data-primarycolor="#c5f22f"
+                data-secondarycolor="#acd035"
+                data-midcolor="#b9e132"
+                data-selection-color="rgba(185,225,50,0.25)">
+                <a href="contact.html">
+                    <h2>Touch with Me</h2>
+                    <h3>很高兴茫茫人海能和你相遇</h3>
+                    <p>梦里能到达的地方，终有一天脚步也能到达。</p>
+                    <div class="arrow"><div class="circle"></div><img src="static/images/home-arrow.svg" /><div class="spine"></div></div>
+                </a>
+            </li>
+            
+            <li id="site-info"
+                class='page '
+                style="--highlight-primary: #d700e5; --selection-color: rgba(215,0,229,0.25);"
+                data-slug="site-info"
+                data-primarycolor="#e300f1"
+                data-secondarycolor="#ca00d9"
+                data-midcolor="#d700e5"
+                data-selection-color="rgba(215,0,229,0.25)">
+                <a href="http://www.beian.miit.gov.cn/" target="_blank">
+                    <h2>Cite Info</h2>
+                    <h3>网站信息</h3>
+                    <p>本站由Mankii独立开发<br>©版权所有 ©Mankii.com</p>
+                    <div class="arrow"><div class="circle"></div><img src="static/images/home-arrow.svg" /><div class="spine"></div></div>
+                </a>
+            </li>
+            
+        </ul>
     
 
-  </div>
-  <footer class="footer text-center">
-    <div id="bottom-inner">
-        <a class="bottom-item" target="_blank" rel="noopener" href="https://blog.0xff000000.com">首页</a> |
-        <a class="bottom-item" href="https://0xff000000.com" target="_blank">主站</a> |
-        <a class="bottom-item" href="https://github.com/KevinOfNeu" target="_blank">GitHub</a> |
-        <a class="bottom-item" href="https://hexo.io" target="_blank">Powered by hexo</a> |
-        <a class="bottom-item" href="https://github.com/KevinOfNeu/hexo-theme-xoxo" target="_blank">Theme xoxo</a>
-    </div>
-</footer>
-  
+        <script>
+            let anchors = ["mankii","web-front-end","design","blog","know","site-info"];
+            Site.previousPage = Site.currentPage;
+            Site.currentPage = new Home(anchors);
 
-<script>
-  (function(window, document, undefined) {
+            Site.currentPage.firstRun = function() {
+                Site.currentPage.addListeners();
+                Site.smoothScroll.scrollToY(Site.currentPage.currentIndex * (Site.height || innerHeight));
 
-    var timer = null;
-
-    function returnTop() {
-      cancelAnimationFrame(timer);
-      timer = requestAnimationFrame(function fn() {
-        var oTop = document.body.scrollTop || document.documentElement.scrollTop;
-        if (oTop > 0) {
-          document.body.scrollTop = document.documentElement.scrollTop = oTop - 50;
-          timer = requestAnimationFrame(fn);
-        } else {
-          cancelAnimationFrame(timer);
-        }
-      });
-    }
-
-    var hearts = [];
-    window.requestAnimationFrame = (function() {
-      return window.requestAnimationFrame ||
-        window.webkitRequestAnimationFrame ||
-        window.mozRequestAnimationFrame ||
-        window.oRequestAnimationFrame ||
-        window.msRequestAnimationFrame ||
-        function(callback) {
-          setTimeout(callback, 1000 / 60);
-        }
-    })();
-    init();
-
-    function init() {
-      css(".heart{z-index:9999;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: absolute;}.heart:after{top: -5px;}.heart:before{left: -5px;}");
-      attachEvent();
-      gameloop();
-      addMenuEvent();
-    }
-
-    function gameloop() {
-      for (var i = 0; i < hearts.length; i++) {
-        if (hearts[i].alpha <= 0) {
-          document.body.removeChild(hearts[i].el);
-          hearts.splice(i, 1);
-          continue;
-        }
-        hearts[i].y--;
-        hearts[i].scale += 0.004;
-        hearts[i].alpha -= 0.013;
-        hearts[i].el.style.cssText = "left:" + hearts[i].x + "px;top:" + hearts[i].y + "px;opacity:" + hearts[i].alpha + ";transform:scale(" + hearts[i].scale + "," + hearts[i].scale + ") rotate(45deg);background:" + hearts[i].color;
-      }
-      requestAnimationFrame(gameloop);
-    }
-
-    /**
-     * 给logo设置点击事件
-     * 
-     * - 回到顶部
-     * - 出现爱心
-     */
-    function attachEvent() {
-      var old = typeof window.onclick === "function" && window.onclick;
-      var logo = document.getElementById("logo");
-      if (logo) {
-        logo.onclick = function(event) {
-          returnTop();
-          old && old();
-          createHeart(event);
-        }
-      }
-      
-    }
-
-    function createHeart(event) {
-      var d = document.createElement("div");
-      d.className = "heart";
-      hearts.push({
-        el: d,
-        x: event.clientX - 5,
-        y: event.clientY - 5,
-        scale: 1,
-        alpha: 1,
-        color: randomColor()
-      });
-      document.body.appendChild(d);
-    }
-
-    function css(css) {
-      var style = document.createElement("style");
-      style.type = "text/css";
-      try {
-        style.appendChild(document.createTextNode(css));
-      } catch (ex) {
-        style.styleSheet.cssText = css;
-      }
-      document.getElementsByTagName('head')[0].appendChild(style);
-    }
-
-    function randomColor() {
-      // return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + ")";
-      return "#F44336";
-    }
-
-    function addMenuEvent() {
-      var menu = document.getElementById('menu-main-post');
-      if (menu) {
-        var toc = document.getElementById('toc');
-        if (toc) {
-          menu.onclick = function() {
-            if (toc) {
-              if (toc.style.display == 'block') {
-                toc.style.display = 'none';
-              } else {
-                toc.style.display = 'block';
-              }
+                let page = Site.currentPage.pages[Site.currentPage.currentIndex];
+                Site.currentPage.ribbonColor = {primary: Color.hexToRgb(page.dataset.primarycolor), secondary: Color.hexToRgb(page.dataset.secondarycolor)};
+                Ribbon.drawArea = {top: 0, height: innerHeight};
+                Ribbon.primaryColor = Site.currentPage.ribbonColor.primary;
+                Ribbon.secondaryColor = Site.currentPage.ribbonColor.secondary;
+                Ribbon.setMode(Ribbon.Mode.HOME);
+                Menu.logo.classList.add('fixed');
             }
-          };
-        } else {
-          menu.style.display = 'none';
-        }
-      }
-    }
+        </script>
 
-  })(window, document);
-</script>
+        </div>
+    </div>
 
-  
-  <script>
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?FuckUBaidu";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
+    <div id="menu-modal"></div>
 
+    <script>
+        FontCssLoader.init(["static/css/fonts.css"], function() {
+            Menu.init();
 
+            Site.init();
+            if (Site.smoothScroll) {
+                Site.smoothScroll.paginate = Site.currentPage.paginate;
+                Site.smoothScroll.paginateModifier = (Site.currentPage.paginateModifier || 1);
+            }
 
-  <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'XXX', 'auto');
-      ga('send', 'pageview');
-  </script>
+            if (Site.currentPage && Site.currentPage.firstRun) {
+                Site.currentPage.firstRun();
+            }
 
+            Site.startRendering();
+
+            Site.prepareForIntro();
+            document.body.classList.remove('fonts-loading');
+            setTimeout(function() {
+                requestAnimationFrame(function() {
+                    Site.playIntro();
+                });
+            }, 25);
+        });
+    </script>
 
 </body>
 </html>
